@@ -1,1 +1,31 @@
 
+<table  class="table text-center">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>precio</th>
+            <th>Stock</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let choco of chocolates" [ngClass]="{'oferta': choco.oferta}">
+            <td><img clas="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="100"></td>
+            <td>{{choco.nombre}}</td>
+            <td>{{choco.tipo}}</td>
+            <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
+            <td *ngIf="choco.stock!=0">{{choco.stock}}</td>
+            <td *ngIf="choco.stock==0"><span class="alert alert-warning">SIN STOCK</span></td>
+            <td>
+                <button class="btn-primary" (click)="downCantidad(choco)">-</button>
+                {{choco.cantidad}}
+                <button class="btn-primary" (click)="upCantidad(choco)">+</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="text-center">
+    <button class="btn btn-primary" (click)="comprar()">Comprar</button>
