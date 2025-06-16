@@ -6,24 +6,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" [routerLink]="['about']">About</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-<div class="container" data-bs-theme="dark" style="margin-left: 0px">
-  <div class="row">
-    <div class="col-10"><app-choco-list></app-choco-list></div>
-    <div class="col-2">Carrito de compras</div>
-  </div>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
-
- <footer class="text-center text-lg-start bg-light text-muted">
+ <footer class="text-center text-lg-start bg-dark text-white mt-5">
     <div class="text-center p-4">
-      {{title}}© - 2025 - Real and Unique CHocolate
+      {{title}} - 2025 - Real and Unique Chocolate
     </div></footer>

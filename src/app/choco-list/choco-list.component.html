@@ -1,26 +1,26 @@
-
-<table  class="table text-center">
+<h3>Lista de productos</h3>
+<table  class="table text-center auto">
     <thead>
         <tr>
-            <th></th>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>precio</th>
-            <th>Stock</th>
-            <th>Cantidad</th>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Cantidad</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let choco of chocolates" [ngClass]="{'oferta': choco.oferta}">
-            <td><img clas="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="100"></td>
+            <td><img clas="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>
             <td>{{choco.nombre}}</td>
             <td>{{choco.tipo}}</td>
             <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
             <td *ngIf="choco.stock!=0">{{choco.stock}}</td>
-            <td *ngIf="choco.stock==0"><span class="alert alert-warning">SIN STOCK</span></td>
+            <td *ngIf="choco.stock==0"><span class="alert alert-warning margin-left">SIN STOCK</span></td>
             <td>
                 <button class="btn btn-light" (click)="downCantidad(choco)">-</button>
-                <input type="text" [ngModel]="choco.cantidad" class="form-control text-center" [disabled]="choco.stock==0" style="width: 40px;">
+                <input type="text" [ngModel]="choco.cantidad" class="cantidad" [disabled]="choco.stock==0">
                 <button class="btn btn-light" (click)="upCantidad(choco)">+</button>
             </td>
         </tr>
