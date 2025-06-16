@@ -61,13 +61,15 @@ export class ChocoListComponent implements OnInit {
   }
 
   downCantidad(choco:Chocolate){
+    if(choco.cantidad>0)
     choco.cantidad--;
   }
   upCantidad(choco:Chocolate){
+    if(choco.cantidad<choco.stock)
     choco.cantidad++;
   }
 
   comprar(){
-    
+
   }
 }

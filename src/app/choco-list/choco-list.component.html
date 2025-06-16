@@ -19,9 +19,9 @@
             <td *ngIf="choco.stock!=0">{{choco.stock}}</td>
             <td *ngIf="choco.stock==0"><span class="alert alert-warning">SIN STOCK</span></td>
             <td>
-                <button class="btn-primary" (click)="downCantidad(choco)">-</button>
-                {{choco.cantidad}}
-                <button class="btn-primary" (click)="upCantidad(choco)">+</button>
+                <button class="btn btn-light" (click)="downCantidad(choco)">-</button>
+                <input type="text" [ngModel]="choco.cantidad" class="form-control text-center" [disabled]="choco.stock==0" style="width: 40px;">
+                <button class="btn btn-light" (click)="upCantidad(choco)">+</button>
             </td>
         </tr>
     </tbody>
