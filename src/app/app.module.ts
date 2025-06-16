@@ -5,11 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChocoListComponent } from './choco-list/choco-list.component';
+import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
+import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChocoListComponent
+    ChocoListComponent,
+    RauchContactComponent,
+    RauchChocolatesComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
