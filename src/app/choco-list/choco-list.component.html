@@ -18,10 +18,8 @@
             <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
             <td *ngIf="choco.stock!=0">{{choco.stock}}</td>
             <td *ngIf="choco.stock==0"><span class="alert alert-warning margin-left">SIN STOCK</span></td>
-            <td>
-                <button class="btn btn-light" (click)="downCantidad(choco)">-</button>
-                <input type="text" [ngModel]="choco.cantidad" class="cantidad" [disabled]="choco.stock==0">
-                <button class="btn btn-light" (click)="upCantidad(choco)">+</button>
+            <td >
+                <app-input-integer [(cantidad)]="choco.cantidad" [max]="choco.stock" *ngIf="choco.stock" (maximoStock)="maximoStock($event)"></app-input-integer>
             </td>
         </tr>
     </tbody>

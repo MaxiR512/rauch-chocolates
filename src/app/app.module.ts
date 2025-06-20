@@ -8,6 +8,7 @@ import { ChocoListComponent } from './choco-list/choco-list.component';
 import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
 import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ChocoListComponent,
     RauchContactComponent,
     RauchChocolatesComponent,
-    CarritoComponent
+    CarritoComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

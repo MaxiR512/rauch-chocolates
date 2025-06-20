@@ -60,15 +60,9 @@ export class ChocoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  downCantidad(choco:Chocolate){
-    if(choco.cantidad>0)
-    choco.cantidad--;
+  maximoStock(m:String){
+    alert(m)
   }
-  upCantidad(choco:Chocolate){
-    if(choco.cantidad<choco.stock)
-    choco.cantidad++;
-  }
-
   comprar(){
 
   }
