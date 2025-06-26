@@ -20,6 +20,7 @@
             <td *ngIf="choco.stock==0"><span class="alert alert-warning margin-left">SIN STOCK</span></td>
             <td >
                 <app-input-integer [(cantidad)]="choco.cantidad" [max]="choco.stock" *ngIf="choco.stock" (maximoStock)="maximoStock($event)"></app-input-integer>
+                <button class="btn-primary" (click)="agregarCarrito(choco)">Agregar</button>
             </td>
         </tr>
     </tbody>

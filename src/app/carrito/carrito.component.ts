@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChocoCarritoService } from '../choco-carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.scss'
 })
-export class CarritoComponent {
-
+export class CarritoComponent  {
+  
+  constructor(private carrito: ChocoCarritoService){
+  }
+  
+  
 }

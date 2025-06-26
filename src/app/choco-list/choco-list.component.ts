@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChocoCarritoService } from '../choco-carrito.service';
 import { Chocolate } from './Choco';
 
 @Component({
@@ -55,9 +56,15 @@ export class ChocoListComponent implements OnInit {
   }
 ]
 
-  constructor() {}
+
+  constructor(private carrito:ChocoCarritoService) {
+  }
 
   ngOnInit() {
+  }
+
+  agregarCarrito(choco:Chocolate){
+    this.carrito.agregarCarrito(choco)
   }
 
   maximoStock(m:String){

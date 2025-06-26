@@ -1,5 +1,5 @@
 <div>
     <button class="btn btn-light" (click)="downCantidad()">-</button>
-    <input type="text" [ngModel]="cantidad" class="cantidad" (keyup)="cambiarCantidad($event)" />
+    <input type="text" [(ngModel)]="cantidad" class="cantidad" (keyup)="cambiarCantidad($event)" />
     <button class="btn btn-light" (click)="upCantidad()">+</button>
 </div>
