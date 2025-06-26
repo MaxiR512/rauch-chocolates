@@ -1,5 +1,5 @@
 <h3>Lista de productos</h3>
-<table  class="table text-center auto">
+<table class="table text-center auto" data-bs-theme="dark">
     <thead>
         <tr>
             <th scope="col"></th>
@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let choco of chocolates" [ngClass]="{'oferta': choco.oferta}">
-            <td><img clas="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>
+            <td><img class="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>
             <td>{{choco.nombre}}</td>
             <td>{{choco.tipo}}</td>
             <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
@@ -20,7 +20,7 @@
             <td *ngIf="choco.stock==0"><span class="alert alert-warning margin-left">SIN STOCK</span></td>
             <td >
                 <app-input-integer [(cantidad)]="choco.cantidad" [max]="choco.stock" *ngIf="choco.stock" (maximoStock)="maximoStock($event)"></app-input-integer>
-                <button class="btn-primary" (click)="agregarCarrito(choco)">Agregar</button>
+                <button *ngIf="choco.stock" class="btn btn-outline-warning" (click)="agregarCarrito(choco)">Agregar</button>
             </td>
         </tr>
     </tbody>
