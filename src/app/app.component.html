@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary"data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo3.jpg" alt="Logo" width="200" class="d-inline-block-text-top" style="border-radius: 15px;">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="assets/img/logo3.jpg" alt="Logo" width="180" class="d-inline-block-text-top" style="border-radius: 15px;">
     </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
@@ -18,7 +18,7 @@
 <div class="main">
   <router-outlet></router-outlet>
 </div>
- <footer class="text-center text-lg-start bg-dark text-white mt-5">
+ <footer class="text-center text-lg-start mt-5">
     <div class="text-center p-4">
       {{title}} - 2025 - Real and Unique Chocolate
     </div></footer>
