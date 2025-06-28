@@ -4,6 +4,6 @@ export interface Chocolate {
   precio: number;
   stock: number;
   imagen: string;
-  cantidad: number;
   oferta:boolean;
+  cantidad: number;
 }
