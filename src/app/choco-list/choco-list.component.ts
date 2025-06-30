@@ -11,7 +11,26 @@ import { Chocolate } from './Choco';
 })
 export class ChocoListComponent implements OnInit {
   
-  chocolates : Chocolate[]= [];
+  chocolates : Chocolate[]= [
+    {
+      nombre: "negro",
+      tipo: "marmolado",
+      stock: 30,
+      imagen: " ",
+      oferta: false,
+      cantidad: 0,
+      precio: 450
+    },
+    {
+      nombre: "blanco",
+      tipo: "marmolado",
+      stock: 45,
+      imagen: " ",
+      oferta: false,
+      cantidad: 0,
+      precio: 1700
+    }
+  ];
 
 
   constructor(

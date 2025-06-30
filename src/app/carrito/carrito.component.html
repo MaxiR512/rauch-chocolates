@@ -1,6 +1,31 @@
 <h3>Carrito de compras</h3>
-<ul>
-    <li *ngFor="let ch of listaChocolates$ | async" class="list-group-item">
-        {{ch.nombre}}: {{ch.cantidad}} UNIDADES
-    </li>
-</ul>
+
+    <table class="table text-center auto" style="width: 100;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ch of listaChocolates$ | async" >
+                <td>{{ch.nombre}}</td>
+                <td>{{ch.cantidad}}</td>
+                <td>{{ch.precio*ch.cantidad}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="total text-center">
+            @if(totalChocolates==0){
+            <div>
+                <p>No hay chocolates en el carrito</p>
+                <img src="/assets/img/empanadalogo.jpeg" alt="logo">
+            </div>
+            }
+            @else {
+            <p>Chocolates en el carrito: {{totalChocolates}} 
+                <span>Precio del carrito: {{totalPrecio |
+                    currency}}</span> </p>
+            }
