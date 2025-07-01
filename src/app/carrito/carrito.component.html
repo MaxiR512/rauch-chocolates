@@ -12,8 +12,7 @@
             <tr *ngFor="let ch of listaChocolates$ | async" >
                 <td>{{ch.nombre}}</td>
                 <td>{{ch.cantidad}}</td>
-                <td>{{ch.precio*ch.cantidad |  
-                currency}}</td>
+                <td>{{ch.precio*ch.cantidad}}</td>
             </tr>
         </tbody>
     </table>
@@ -35,8 +34,7 @@
             </tr>
             <tr>
                 <td><h6>Precio del carrito:</h6></td>
-                <td><h3>{{totalPrecio |  
-                currency}}</h3></td>
+                <td><h3>{{totalPrecio}}</h3></td>
 
             </tr>
             

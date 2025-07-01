@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rauch-chocolates',
   standalone: false,
   templateUrl: './rauch-chocolates.component.html',
-  styleUrl: './rauch-chocolates.component.scss'
+  styleUrls: ['./rauch-chocolates.component.scss']
 })
 export class RauchChocolatesComponent  {
 
