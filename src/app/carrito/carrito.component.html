@@ -1,6 +1,6 @@
 <h3>Carrito de compras</h3>
 
-    <table class="table text-center auto" style="width: 100;">
+    <table class="table text-center auto">
         <thead>
             <tr>
                 <th>Producto</th>
@@ -12,20 +12,34 @@
             <tr *ngFor="let ch of listaChocolates$ | async" >
                 <td>{{ch.nombre}}</td>
                 <td>{{ch.cantidad}}</td>
-                <td>{{ch.precio*ch.cantidad}}</td>
+                <td>{{ch.precio*ch.cantidad |  
+                currency}}</td>
             </tr>
         </tbody>
     </table>
     
-    <div class="total text-center">
-            @if(totalChocolates==0){
+    @if(totalChocolates==0){
+                <div class="total text-center">
             <div>
                 <p>No hay chocolates en el carrito</p>
-                <img src="/assets/img/empanadalogo.jpeg" alt="logo">
+                <img src="/assets/img/Logo1.jpg" width="200" alt="hola">
             </div>
+        </div>
             }
             @else {
-            <p>Chocolates en el carrito: {{totalChocolates}} 
-                <span>Precio del carrito: {{totalPrecio |
-                    currency}}</span> </p>
+            <table class=" text-center center">
+        <tbody>
+            <tr>
+                <td><p>Chocolates en el carrito:</p></td>
+                <td><h3>{{totalChocolates}}</h3></td>
+            </tr>
+            <tr>
+                <td><h6>Precio del carrito:</h6></td>
+                <td><h3>{{totalPrecio |  
+                currency}}</h3></td>
+
+            </tr>
+            
+        </tbody>
+    </table>
             }
