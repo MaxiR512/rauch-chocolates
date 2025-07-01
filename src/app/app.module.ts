@@ -10,7 +10,6 @@ import { ChocoListComponent } from './choco-list/choco-list.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
 import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
-import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -21,7 +20,6 @@ import { AdminComponent } from './admin/admin.component';
     RauchChocolatesComponent,
     CarritoComponent,
     InputIntegerComponent,
-    AdminComponent
   ],
   imports: [
     BrowserModule,
