@@ -15,9 +15,7 @@ platformBrowser().bootstrapModule(AppModule, {
       const dark = checkbox.checked;
       body.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
       const label = document.getElementById('toggleThemeLabel');
-      if (label) {
-        label.textContent = dark ? 'Modo Claro' : 'Modo Oscuro';
-      }
+      
       if (logoImg) {
         logoImg.src = dark ? 'assets/img/logo4.png' : 'assets/img/logo3.jpg';
       }
