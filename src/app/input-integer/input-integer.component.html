@@ -1,7 +1,7 @@
 <div>
-    <input type="number" [(ngModel)]="cantidad" class="cantidad" (keyup)="cambiarCantidad($event)" />
+    <input type="text" [(ngModel)]="cantidad" class="cantidad" (keyup)="cambiarCantidad($event)" />
     <div class="flex">
-        <button class="btn btn-outline-warning" (click)="downCantidad()">➖</button>
-        <button class="btn btn-outline-warning" (click)="upCantidad()">➕</button>
+        <button class="btn btn-outline-success" (click)="downCantidad()">-</button>
+        <button class="btn btn-outline-success" (click)="upCantidad()">+</button>
     </div>
 </div>
