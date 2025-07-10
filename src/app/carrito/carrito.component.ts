@@ -36,4 +36,9 @@ export class CarritoComponent implements OnInit {
     });
   }
 
+  quitarChocolate(chocolate: Chocolate): void {
+    this.carrito.quitarChocolate(chocolate);
+    this.actualizarCarrito();
+  }
+
 }

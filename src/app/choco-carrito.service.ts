@@ -25,4 +25,21 @@ export class ChocoCarritoService {
 
   }
 
+  actualizarCarrito() {
+    this.listaChocolates.next(this._listaChocolates);
+  }
+  quitarChocolate(chocolate: Chocolate): void {
+    let index = this._listaChocolates.findIndex((item) => item.nombre === chocolate.nombre);
+
+    if (index !== -1) {
+      this._listaChocolates[index].cantidad--;
+
+      if (this._listaChocolates[index].cantidad === 0) {
+        this._listaChocolates.splice(index, 1);
+      }
+
+      this.listaChocolates.next(this._listaChocolates);
+    }
+  }
+
 }
