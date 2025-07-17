@@ -13,31 +13,30 @@
                 <td>{{ch.nombre}}</td>
                 <td>{{ch.cantidad}}</td>
                 <td>{{ch.precio*ch.cantidad}}</td>
+                <td><button class="btn" (click)="quitarChocolate(ch)">QUITAR</button></td>
             </tr>
         </tbody>
     </table>
     
     @if(totalChocolates==0){
-                <div class="total text-center">
+        <div class="total text-center">
             <div>
                 <p>No hay chocolates en el carrito</p>
                 <img id="logocarro" src="/assets/img/Logo1.png" width="200" alt="hola">
             </div>
         </div>
-            }
-            @else {
+    }
+    @else {
             <table class=" text-center center">
-        <tbody>
-            <tr>
-                <td><p>Chocolates en el carrito:</p></td>
-                <td><h3>{{totalChocolates}}</h3></td>
-            </tr>
-            <tr>
-                <td><h6>Precio del carrito:</h6></td>
-                <td><h3>{{totalPrecio}}</h3></td>
-
-            </tr>
-            
-        </tbody>
-    </table>
-            }
+                <tbody>
+                    <tr>
+                        <td><p>Chocolates en el carrito:</p></td>
+                        <td><h3>{{totalChocolates}}</h3></td>
+                    </tr>
+                    <tr>
+                        <td><h6>Precio del carrito:</h6></td>
+                        <td><h3>{{totalPrecio}}</h3></td>
+                    </tr>
+                </tbody>
+            </table>
+    }

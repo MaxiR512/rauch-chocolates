@@ -16,7 +16,7 @@
             <td>{{choco.nombre}}</td>
             <td>{{choco.tipo}}</td>
             <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
-            <td *ngIf="choco.stock!=0">{{choco.stock}}</td>
+            <td *ngIf="choco.stock!=0"><span class="alert alert-success margin-left">DISPONIBLE</span></td>
             <td *ngIf="choco.stock==0"><span class="alert alert-warning margin-left">SIN STOCK</span></td>
             <td >
                 <app-input-integer [(cantidad)]="choco.cantidad" [max]="choco.stock" *ngIf="choco.stock" (maximoStock)="maximoStock($event)"></app-input-integer>

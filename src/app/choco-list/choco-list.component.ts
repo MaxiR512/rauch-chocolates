@@ -33,4 +33,8 @@ export class ChocoListComponent implements OnInit {
     alert(m)
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0b053491ad6ed9a610944928fb7e1d9ae4b15638
