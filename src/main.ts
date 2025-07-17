@@ -9,6 +9,7 @@ platformBrowser().bootstrapModule(AppModule, {
   const checkbox = document.getElementById('toggleThemeCheckbox') as HTMLInputElement | null;
   const body = document.body;
   const logoImg = document.getElementById('logoImg') as HTMLImageElement | null;
+  const logoCarrito = document.getElementById('logocarro') as HTMLImageElement | null;
 
   if (checkbox) {
     checkbox.addEventListener('change', () => {
@@ -19,5 +20,7 @@ platformBrowser().bootstrapModule(AppModule, {
       if (logoImg) {
         logoImg.src = dark ? 'assets/img/logo4.png' : 'assets/img/logo3.jpg';
       }
+      if(logoCarrito)
+      logoCarrito.src = dark ? 'assets/img/Logo2.png' : 'assets/img/Logo1.png';
     });
   }

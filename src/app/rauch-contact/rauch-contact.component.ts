@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './rauch-contact.component.scss'
 })
 export class RauchContactComponent {
+  title = 'RaUCH';
+  subtitle = 'Chocolatería';
+  mail='mrebainera@alumnos.exa.unicen.edu.ar'
+
+  constructor() { }
+
+  ngOnInit(): void {
+    // Initialization logic can go here
+  }
 
 }

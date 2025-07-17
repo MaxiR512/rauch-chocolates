@@ -32,7 +32,5 @@ export class ChocoListComponent implements OnInit {
   maximoStock(m:String){
     alert(m)
   }
-  comprar(){
 
-  }
 }
