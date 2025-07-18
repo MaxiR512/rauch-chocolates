@@ -13,7 +13,7 @@
                 <td>{{ch.nombre}}</td>
                 <td>{{ch.cantidad}}</td>
                 <td>{{ch.precio*ch.cantidad}}</td>
-                <td><button class="btn" (click)="quitarChocolate(ch)">QUITAR</button></td>
+                <td><button class="btn" (click)="quitarChocolate(ch)">❎</button></td>
             </tr>
         </tbody>
     </table>
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <td><h6>Precio del carrito:</h6></td>
-                        <td><h3>{{totalPrecio}}</h3></td>
+                        <td><h3>{{totalPrecio | currency:'USD':'symbol':'1.2-2'}}</h3></td>
                     </tr>
                 </tbody>
             </table>
