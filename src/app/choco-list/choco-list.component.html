@@ -12,7 +12,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let choco of chocolates" [ngClass]="{'oferta': choco.oferta}">
-            <td><img class="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>
+            @if (choco.oferta) {<td>OFERTA <img class="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>}
+            @else {<td><img class="img-thumbnail" [src]="choco.imagen" [alt]="choco.nombre" width="80"></td>}
             <td>{{choco.nombre}}</td>
             <td>{{choco.tipo}}</td>
             <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
