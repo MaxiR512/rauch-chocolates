@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
 import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: RauchContactComponent
+  },
+  {
+    path: 'login',
+    component: AdminComponent
   },
 ];
 
