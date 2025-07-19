@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChocoDatosService } from '../choco-datos.service';
 import { Chocolate } from '../choco-list/Choco';
 
 @Component({
-  selector: 'app-editable',
+  selector: 'app-eliminar',
   standalone: false,
-  templateUrl: './editable.component.html',
-  styleUrl: './editable.component.scss'
+  templateUrl: './eliminar.component.html',
+  styleUrl: './eliminar.component.scss'
 })
-export class EditableComponent implements OnInit {
+export class EliminarComponent {
 chocolates : Chocolate[]= [];
 
 

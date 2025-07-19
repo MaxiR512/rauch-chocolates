@@ -3,15 +3,14 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ChocoDatosService } from '../choco-datos.service';
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-agregar',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  templateUrl: './agregar.component.html',
+  styleUrl: './agregar.component.scss'
 })
-export class AdminComponent {
-
- constructor(
+export class AgregarComponent {
+constructor(
   private chocosService: ChocoDatosService) {
  }
 
@@ -36,8 +35,9 @@ OnSubmit() {
         Boolean(oferta),
         imagen ?? ''
     ).subscribe();
-    this.formularioAdmin.reset();
+    this.formularioAdmin.reset()
+    alert('Producto agregado correctamente');
+    
 }
 
 }
-

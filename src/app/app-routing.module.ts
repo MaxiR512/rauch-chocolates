@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { EditableComponent } from './editable/editable.component';
+import { AgregarComponent } from './agregar/agregar.component';
+import { EliminarComponent } from './eliminar/eliminar.component';
 import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
 import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
 
@@ -20,12 +20,12 @@ const routes: Routes = [
     component: RauchContactComponent
   },
   {
-    path: 'admin',
-    component: AdminComponent
+    path: 'agregar',
+    component: AgregarComponent
   },
   {
-    path: 'editar',
-    component: EditableComponent
+    path: 'eliminar',
+    component: EliminarComponent
   },
 ];
 
