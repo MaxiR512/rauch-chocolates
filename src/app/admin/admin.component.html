@@ -1,24 +1,38 @@
-<form [formGroup]="formularioAdmin"  (submit)="OnSubmit()" style="width: 30rem">
+
+        <h3>Agregar Producto</h3>
+    <form [formGroup]="formularioAdmin" (submit)="OnSubmit()" style="width: 20rem">
   
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Usuario</label>
+    <div class="mb-1">
+        <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" formControlName="nombre">
     </div>
+    
+    <div class="mb-1">
+        <label for="tipo" class="form-label">Tipo</label>
+        <input type="text" class="form-control" id="tipo" formControlName="tipo">
+    </div>
 
-    <div class="mb-3">
-        <label for="email" class="form-label">Correo</label>
-        <input type="email" class="form-control" id="email" formControlName="email">
-  </div>
-  
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" formControlName="password">
-  </div>
+    <div class="mb-1">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="precio" formControlName="precio">
+    </div>
+    
+    <div class="mb-1">
+        <label for="stock" class="form-label">Stock</label>
+        <input type="number" class="form-control" id="stock" formControlName="stock">
+    </div>
 
-  <div class="mb-3">
-    <label for="repetirPassword" class="form-label">Repetir Password</label>
-    <input type="password" class="form-control" id="repetirPassword" formControlName="repetirPassword">
-  </div>
+    <div class="mb-1 form-check">
+      <label class="form-check-label" for="oferta">Oferta</label>
+        <input type="checkbox" class="form-check-input" id="oferta" formControlName="oferta">
+    </div>
+
+    <div class="mb-1">
+        <label for="imagen" class="form-label">Imagen</label>
+        <input type="text" class="form-control" id="imagen" formControlName="imagen">
+    </div>
   
-  <button [disabled]="formularioAdmin.invalid" type="submit" class="btn btn-primary">LogIn</button>
+  <button [disabled]="formularioAdmin.invalid" type="submit" class="btn btn-success">Agregar</button>
 </form>
+
+

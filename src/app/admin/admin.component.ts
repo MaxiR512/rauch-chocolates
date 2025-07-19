@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ChocoDatosService } from '../choco-datos.service';
 
 @Component({
@@ -11,35 +11,33 @@ import { ChocoDatosService } from '../choco-datos.service';
 })
 export class AdminComponent {
 
-@Output()
-  administrador:EventEmitter<boolean>= new EventEmitter<boolean>();
-  isAdmin: boolean = false;
-
- constructor(private chocosService: ChocoDatosService) { 
+ constructor(
+  private chocosService: ChocoDatosService) {
  }
-
 
   formularioAdmin = new FormGroup({
     nombre: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    repetirPassword: new FormControl('', [Validators.required]),
-  }, [this.isMismatch]);
+    tipo: new FormControl('', [Validators.required]),
+    precio: new FormControl('', [Validators.required]),
+    stock: new FormControl('', [Validators.required]),
+    oferta: new FormControl(''),
+    imagen: new FormControl(''),
+  });
 
-  isMismatch(control: AbstractControl): ValidationErrors | null {
-    const password = control.get('password');
-    const repetirPassword = control.get('repetirPassword');
-    return password && repetirPassword && password.value !== repetirPassword.value ? { mismatch: true } : null;
-  }
 
-  OnSubmit() {
-    const { nombre, email, password } = this.formularioAdmin.value;
-    let access = this.chocosService.validarUsuario(nombre ?? '', email ?? '', password ?? '');
-    if(access) {
-      this.isAdmin = true;
-      this.administrador.emit(this.isAdmin);
-    }
-  }
+OnSubmit() {
+    const { nombre, tipo, precio, stock, oferta, imagen } = this.formularioAdmin.value;
+
+    this.chocosService.addChoco(
+        nombre ?? '',
+        tipo ?? '',
+        Number(precio) ?? 0,
+        Number(stock) ?? 0,
+        Boolean(oferta),
+        imagen ?? ''
+    ).subscribe();
+    this.formularioAdmin.reset();
+}
 
 }
 

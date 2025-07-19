@@ -19,7 +19,7 @@ const routes: Routes = [
     component: RauchContactComponent
   },
   {
-    path: 'login',
+    path: 'admin',
     component: AdminComponent
   },
 ];
