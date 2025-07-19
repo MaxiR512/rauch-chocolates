@@ -1,8 +1,8 @@
 -----
 
-## "RauCHocolates" - Chocolatería Online
+## "RaUCHocolates" - Chocolatería Online
 
-¡Bienvenido a **RauCHocolates**, tu chocolatería online favorita! Este proyecto, desarrollado con **Angular**, ofrece una experiencia de usuario intuitiva para explorar una variedad de productos de chocolate y gestionar un carrito de compras de manera eficiente.
+¡Bienvenido a **RaUCHocolates**, tu chocolatería online favorita! Este proyecto, desarrollado con **Angular**, ofrece una experiencia de usuario intuitiva para explorar una variedad de productos de chocolate y gestionar un carrito de compras de manera eficiente.
 
 ### Funcionalidades Destacadas
 
@@ -16,10 +16,13 @@
 
 -----
 
-## Datos del Estudiante
-Rebainera, Maximiliano	
-34961232
-maxi.reba@gmail.com
-sede Rauch
+## Datos personales
+Nombre y apellido: Maximiliano Rebainera	
+
+DNI: 34961232
+
+Correo: maxi.reba@gmail.com
+
+Sede: Rauch
 
 
