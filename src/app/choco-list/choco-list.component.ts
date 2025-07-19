@@ -24,9 +24,10 @@ export class ChocoListComponent implements OnInit {
   }
 
   agregarCarrito(choco:Chocolate){
+    if(choco.cantidad!==0){
     this.carrito.agregarCarrito(choco);
     choco.stock-=choco.cantidad;
-    choco.cantidad=0;
+    choco.cantidad=0;}
   }
 
   maximoStock(m:String){
