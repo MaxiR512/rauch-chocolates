@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ChocoListComponent } from './choco-list/choco-list.component';
+import { EditableComponent } from './editable/editable.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { RauchChocolatesComponent } from './rauch-chocolates/rauch-chocolates.component';
 import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
@@ -21,6 +22,7 @@ import { RauchContactComponent } from './rauch-contact/rauch-contact.component';
     RauchChocolatesComponent,
     CarritoComponent,
     InputIntegerComponent,
+    EditableComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<h3 class="text-center">Productos</h3>
+<table class="table text-center auto" style="width: 60rem; margin-left: 10rem;">
+    <thead>
+        <tr>
+
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let choco of chocolates" [ngClass]="{'oferta': choco.oferta}">
+
+            <td>{{choco.nombre}}</td>
+            <td>{{choco.precio | currency:'USD':'symbol':'1.2-2'}}</td>
+            <td>{{choco.stock}}</td>
+            <td><button class="btn btn-outline-danger" (click)="borrar(choco)">🗑️</button></td>
+        </tr>
+    </tbody>
+</table>
