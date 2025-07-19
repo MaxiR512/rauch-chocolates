@@ -1,59 +1,25 @@
-# Rauch
+-----
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+## "RauCHocolates" - Chocolatería Online
 
-## Development server
+¡Bienvenido a **RauCHocolates**, tu chocolatería online favorita! Este proyecto, desarrollado con **Angular**, ofrece una experiencia de usuario intuitiva para explorar una variedad de productos de chocolate y gestionar un carrito de compras de manera eficiente.
 
-To start a local development server, run:
+### Funcionalidades Destacadas
 
-```bash
-ng serve
-```
+  * **Catálogo de Productos con Indicadores de Stock y Ofertas:** La página principal (`home`) presenta de forma atractiva todos los productos disponibles en la chocolatería. Cada producto muestra su imagen, nombre, descripción y precio. Además, la aplicación **resalta visualmente si un producto está en oferta o si hay stock disponible**, permitiendo una fácil visualización y selección.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+  * **Carrito de Compras Interactivo:** Implementa un carrito de compras dinámico y fácil de usar. La aplicación permite **agregar o quitar productos** directamente desde la tabla del carrito.
 
-## Code scaffolding
+  * **Control de Cantidades:** Dentro del carrito de compras, la aplicación tiene la capacidad de **controlar las cantidades** de cada producto individualmente. Esto permite ajustar la orden de forma flexible antes de finalizar la compra.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  * **Gestión de Productos:** La aplicación permite la **creación de nuevos productos** utilizando **formularios reactivos**. Además, también es posible **eliminar productos directamente de la base de datos**, facilitando la administración completa del inventario. La API utilizada para alojar la información de los productos es **MockAPI**.
 
-```bash
-ng generate component component-name
-```
+-----
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Datos del Estudiante
+Rebainera, Maximiliano	
+34961232
+maxi.reba@gmail.com
+sede Rauch
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
